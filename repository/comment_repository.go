@@ -1,4 +1,4 @@
-J8package repository
+package repository
 
 import (
 	"time"
@@ -79,6 +79,5 @@ func (c *CommentRepository) DeleteCommentByID(commentID uint) bool {
 	if c.DB.Model(&models.Comment{}).Where("id = ?", commentID).Find(&comment).RowsAffected == 0 {
 		return false
 	}
-	return d
-c.DB​.Delete(&models.Comment{}, commentID).Error == nil
+	return c.DB​.Delete(&models.Comment{}, commentID).Error == nil
 }
