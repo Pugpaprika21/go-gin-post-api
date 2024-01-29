@@ -7,32 +7,17 @@
 [GIN-debug] GET    /api/user/users           --> github.com/Pugpaprika21/go-gin/controller.User.GetUserAll-fm (6 handlers)
 [GIN-debug] POST   /api/user/register        --> github.com/Pugpaprika21/go-gin/controller.User.Register-fm (6 handlers)
 [GIN-debug] POST   /api/user/login           --> github.com/Pugpaprika21/go-gin/controller.User.Login-fm (6 handlers)
-[GIN-debug] GET    /api/post/posts/*postId   --> github.com/Pugpaprika21/go-gin/controller.Post.GetPostAll-fm (6 handlers)
-[GIN-debug] POST   /api/post/create          --> github.com/Pugpaprika21/go-gin/controller.Post.CreatePost-fm (6 handlers)
-[GIN-debug] GET    /api/post/get-post/post/:postId --> github.com/Pugpaprika21/go-gin/controller.Post.GetPostByID-fm (6 handlers)
-[GIN-debug] GET    /api/post/get-post/user/:userId --> github.com/Pugpaprika21/go-gin/controller.Post.GetPostByUserID-fm (6 handlers)
-[GIN-debug] DELETE /api/post/delete/post/:postId --> github.com/Pugpaprika21/go-gin/controller.Post.DeletePostByID-fm (6 handlers)
-[GIN-debug] GET    /api/post/edit/post/:postId/action/:action --> github.com/Pugpaprika21/go-gin/controller.Post.EditPostByID-fm (6 handlers)
-[GIN-debug] PUT    /api/post/update/post/:postId --> github.com/Pugpaprika21/go-gin/controller.Post.UpdatePostByID-fm (6 handlers)
-[GIN-debug] POST   /api/comment/create       --> github.com/Pugpaprika21/go-gin/controller.Comment.CreateComment-fm (6 handlers)
-[GIN-debug] GET    /api/comment/comments     --> github.com/Pugpaprika21/go-gin/controller.Comment.GetCommentAll-fm (6 handlers)
-[GIN-debug] GET    /api/comment/comment/:commentId/user/:userId/action/:action --> github.com/Pugpaprika21/go-gin/controller.Comment.GetComment-fm (6 handlers)
-[GIN-debug] PUT    /api/comment/update/:commentId --> github.com/Pugpaprika21/go-gin/controller.Comment.UpdateComment-fm (6 handlers)
-[GIN-debug] DELETE /api/comment/delete/:commentId --> github.com/Pugpaprika21/go-gin/controller.Comment.DeleteComment-fm (6 handlers)
+[GIN-debug] GET    /api/post/posts/*postId   --> github.com/Pugpaprika21/go-gin/controller.Post.GetPostAll-fm (7 handlers)
+[GIN-debug] GET    /api/post/assets/uploads/:filename --> github.com/Pugpaprika21/go-gin/controller.Post.ShowPostAttachments-fm (7 handlers)
+[GIN-debug] POST   /api/post/create          --> github.com/Pugpaprika21/go-gin/controller.Post.CreatePost-fm (7 handlers)
+[GIN-debug] GET    /api/post/get-post/user/:userId --> github.com/Pugpaprika21/go-gin/controller.Post.GetPostByUser-fm (7 handlers)
+[GIN-debug] DELETE /api/post/delete/post/:postId --> github.com/Pugpaprika21/go-gin/controller.Post.DeletePost-fm (7 handlers)
+[GIN-debug] PUT    /api/post/update/post/:postId --> github.com/Pugpaprika21/go-gin/controller.Post.UpdatePost-fm (7 handlers)
+[GIN-debug] POST   /api/comment/create       --> github.com/Pugpaprika21/go-gin/controller.Comment.CreateComment-fm (7 handlers)
+[GIN-debug] GET    /api/comment/comments     --> github.com/Pugpaprika21/go-gin/controller.Comment.GetCommentAll-fm (7 handlers)
+[GIN-debug] GET    /api/comment/comment/:commentId/user/:userId/action/:action --> github.com/Pugpaprika21/go-gin/controller.Comment.GetComment-fm (7 handlers)
+[GIN-debug] PUT    /api/comment/update/:commentId --> github.com/Pugpaprika21/go-gin/controller.Comment.UpdateComment-fm (7 handlers)
+[GIN-debug] DELETE /api/comment/delete/:commentId --> github.com/Pugpaprika21/go-gin/controller.Comment.DeleteComment-fm (7 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :8000
-[GIN] 2024/01/28 - 05:10:07 | 200 |      2.0705ms |             ::1 | GET      "/api/post/posts/2"
-[GIN] 2024/01/28 - 05:10:07 | 200 |      2.0705ms |             ::1 | GET      "/api/post/posts/2"
-[GIN] 2024/01/28 - 05:10:25 | 200 |      2.2802ms |             ::1 | GET      "/api/post/posts/"
-[GIN] 2024/01/28 - 05:10:25 | 200 |      2.7957ms |             ::1 | GET      "/api/post/posts/"
-[GIN] 2024/01/28 - 05:10:32 | 200 |      2.3323ms |             ::1 | GET      "/api/post/posts/2"
-[GIN] 2024/01/28 - 05:10:32 | 200 |      2.3323ms |             ::1 | GET      "/api/post/posts/2"
-[GIN] 2024/01/28 - 05:10:35 | 200 |      3.5658ms |             ::1 | GET      "/api/post/posts/"
-[GIN] 2024/01/28 - 05:10:35 | 200 |      3.5658ms |             ::1 | GET      "/api/post/posts/"
-[GIN] 2024/01/28 - 05:10:40 | 200 |      2.0779ms |             ::1 | GET      "/api/post/posts/2"
-[GIN] 2024/01/28 - 05:10:40 | 200 |      2.0779ms |             ::1 | GET      "/api/post/posts/2"
-[GIN] 2024/01/28 - 05:10:44 | 200 |      1.7942ms |             ::1 | GET      "/api/post/posts/3"
-[GIN] 2024/01/28 - 05:10:44 | 200 |      1.7942ms |             ::1 | GET      "/api/post/posts/3"
-[GIN] 2024/01/28 - 05:10:50 | 200 |      1.1032ms |             ::1 | GET      "/api/post/posts/2"
-[GIN] 2024/01/28 - 05:10:50 | 200 |      1.1032ms |             ::1 | GET      "/api/post/posts/2"

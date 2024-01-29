@@ -24,6 +24,7 @@ func Setup(router *gin.Engine) {
 			postRepository := repository.NewPostRepository()
 			postController := controller.Post{PostRepositoryInterface: postRepository}
 			postRouter.GET("/posts/*postId", postController.GetPostAll)
+			postRouter.GET("/assets/uploads/:filename", postController.ShowPostAttachments)
 			postRouter.POST("/create", postController.CreatePost)
 			postRouter.GET("/get-post/user/:userId", postController.GetPostByUser)
 			postRouter.DELETE("/delete/post/:postId", postController.DeletePost)

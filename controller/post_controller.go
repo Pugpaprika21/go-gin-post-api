@@ -2,6 +2,7 @@ package controller
 
 import (
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 
@@ -38,6 +39,29 @@ func (p Post) GetPostAll(ctx *gin.Context) {
 		StatusMessage: "Post..",
 		Data:          gin.H{"posts": posts},
 	})
+}
+
+func (p Post) ShowPostAttachments(ctx *gin.Context) {
+	filename := ctx.Param("filename")
+	imagePath := "./assets/uploads/" + filename
+
+	imageFile, err := os.Open(imagePath)
+	if err != nil {
+		ctx.JSON(http.StatusNotFound, gin.H{"error": "Image not found"})
+		return
+	}
+	defer imageFile.Close()
+
+	fileInfo, _ := imageFile.Stat()
+	var fileSize int64 = fileInfo.Size()
+	buffer := make([]byte, fileSize)
+
+	_, err = imageFile.Read(buffer)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to read image"})
+		return
+	}
+	ctx.File(imagePath)
 }
 
 func (p Post) GetPostByUser(ctx *gin.Context) {

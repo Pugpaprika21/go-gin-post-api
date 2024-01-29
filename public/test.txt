@@ -1,0 +1,4 @@
+	// ctx.Header("Content-Type", "application/octet-stream")
+	// ctx.Header("Content-Disposition", "inline; filename="+filename)
+	// ctx.Header("Content-Length", strconv.FormatInt(fileSize, 10))
+	// ctx.Writer.Write(buffer)
